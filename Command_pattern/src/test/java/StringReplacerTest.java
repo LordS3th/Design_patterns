@@ -1,13 +1,12 @@
 import org.junit.jupiter.api.Test;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class StringReplacerTest {
+public class stringReplacerTest {
     @Test
-    public void stringCaseChanger() {
-        StringDrink drink = new StringDrink("aBcD");
-        StringCaseChanger cc = new StringCaseChanger();
-        cc.execute(drink);
-        assertEquals("AbCd", drink.getText());
+    public void stringReplacer() {
+        StringDrink drink = new StringDrink("ABCDABCD");
+        stringReplacer sr = new stringReplacer('A', 'X');
+        sr.execute(drink);
+        assertEquals("XBCDXBCD", drink.getText());
     }
 }
